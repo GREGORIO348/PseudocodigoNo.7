@@ -1,0 +1,38 @@
+Algoritmo promedio_calificacion
+	Definir numUnidades, i Como Entero
+    Definir calificacion, suma Como Real
+    Definir promedio Como Real
+	
+    Escribir "¿Cuántas unidades quieres ingresar?"
+    Leer numUnidades
+	
+    suma = 0
+	
+    Para i Desde 1 Hasta numUnidades Hacer
+        Escribir "Ingresa la calificación de la unidad ", i, ":"
+        Leer calificacion
+        suma = suma + calificacion
+    Fin Para
+	
+    promedio = suma / numUnidades
+	
+    Escribir "El promedio de las calificaciones es: ", promedio
+	
+    Si promedio < 70 Entonces
+        Escribir "Nota: NA"
+    Sino
+        Si promedio >= 70 Y promedio <= 74 Entonces
+            Escribir "Nota: Suficiente"
+        Sino
+            Si promedio >= 75 Y promedio <= 84 Entonces
+                Escribir "Nota: Bueno"
+            Sino
+                Si promedio >= 85 Y promedio <= 94 Entonces
+                    Escribir "Nota: Notable"
+                Sino
+                    Escribir "Nota: Excelente"
+                Fin Si
+            Fin Si
+        Fin Si
+    Fin Si
+FinAlgoritmo
